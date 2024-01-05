@@ -1,0 +1,1 @@
+## This repo is simply a copy of my ongoing and every previously developed program which is/ was part of my programming practice from scratch. So considerably expect some flaws, mistakes or eye watering disasters; also correct me if you found any. Thank You!!!
