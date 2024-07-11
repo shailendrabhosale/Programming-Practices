@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Inside Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .inner-table {
+            border: none;
+            width: 100%;
+        }
+        .inner-table th, .inner-table td {
+            border: none;
+            padding: 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <table>
+        <tr>
+            <th>Sr No</th>
+            <th>Item Code</th>
+            <th>Item & Description</th>
+            <th>HSN Code</th>
+            <th>Qty</th>
+            <th>Rate</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>SP004004</td>
+            <td>
+                <table class="inner-table">
+                    <tr>
+                        <td>SOLAR PANEL 40WP, Make: JYOTITECH</td>
+                    </tr>
+                    <tr>
+                        <td>Wattage: 40Wp</td>
+                    </tr>
+                    <tr>
+                        <td>Size: 665x400x35mm</td>
+                    </tr>
+                    <tr>
+                        <td>Weight: 3Kg</td>
+                    </tr>
+                    <tr>
+                        <td>Cell: Poly-Crystalline</td>
+                    </tr>
+                    <tr>
+                        <td>Hole CD: 70375mm</td>
+                    </tr>
+                    <tr>
+                        <td>Warranty: 25 Years</td>
+                    </tr>
+                </table>
+            </td>
+            <td>85414300</td>
+            <td>200 Nos</td>
+            <td>1,160.00</td>
+            <td>2,32,000.00</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>SP001003</td>
+            <td>
+                <table class="inner-table">
+                    <tr>
+                        <td>SOLAR PANEL 100WP, Make: JYOTITECH</td>
+                    </tr>
+                    <tr>
+                        <td>Wattage: 100Wp</td>
+                    </tr>
+                    <tr>
+                        <td>Size: 665x900x35mm</td>
+                    </tr>
+                    <tr>
+                        <td>Weight: 7Kg</td>
+                    </tr>
+                    <tr>
+                        <td>Cell: Poly Crystalline</td>
+                    </tr>
+                    <tr>
+                        <td>Hole CD: 635x240mm</td>
+                    </tr>
+                    <tr>
+                        <td>Warranty: 25 Years</td>
+                    </tr>
+                </table>
+            </td>
+            <td>85414011</td>
+            <td>25 Nos</td>
+            <td>3,100.00</td>
+            <td>77,500.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">Sub Total:</td>
+            <td>3,09,500.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">SGST(6%):</td>
+            <td>13,920.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">CGST(6%):</td>
+            <td>13,920.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">SGST(9%):</td>
+            <td>9,300.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">CGST(9%):</td>
+            <td>9,300.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;"><strong>Total:</strong></td>
+            <td><strong>3,46,640.00</strong></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

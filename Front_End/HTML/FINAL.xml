@@ -1,0 +1,225 @@
+<data>
+    <xpath expr="/t[@t-name='studio_report_document']" position="replace" mode="inner">
+      <t t-call="web.external_layout">
+        <div class="page">
+          <div class="oe_structure">
+            <h1 style="text-align: center;">Purchase Order</h1>
+            <table class="table table-bordered o_table-black" style=" border: 1px solid black ;">
+              <tbody>
+                <tr>
+                  <td>
+                    <p>
+                      <span class="base-fs">Vendor</span>
+                      <strong>
+                        <span class="base-fs"> : </span>
+                        <br/>
+                      </strong>
+                      <span t-field="doc.partner_id"/>
+                      <span t-field="doc.partner_id.street"/>
+                       ,<span t-field="doc.partner_id.city"/>,<span t-field="doc.partner_id.state_id"/> ,<span t-field="doc.partner_id.country_id"/>,<span t-field="doc.partner_id.zip"/>
+                      <br/>Vendor Code : <span t-field="doc.partner_id.x_studio_vendor_code"/>
+                      <br/>PAN :<span t-field="doc.partner_id.l10n_in_pan"/>
+                      <br/>GST : <span t-field="doc.partner_id.vat"/>
+                    </p>
+                  </td>
+                   
+                  <td>
+                     <table>
+                         <tbody>
+                         <tr>
+                    <p>
+                      PO No : <span t-field="doc.name"/>
+                      <br/>PO Date : <span t-field="doc.date_calendar_start"/>
+                      <br/>
+                    Expected Date :  <span t-field="doc.date_planned"/>
+                      <br/>
+                    PO By : <span t-field="doc.user_id"/>
+                      <br/>PO Email :   </p>
+                       </tr>
+                       <td>
+                           Test
+                       </td>
+                       </tbody>
+                       </table>
+                      </td>
+                      
+                </tr>
+                <tr>
+                  <td>
+                    <p>
+                      <span class="base-fs">Shipped To </span>
+                      <br/>
+                      <span t-field="doc.company_id"/>
+                      <br/>
+                      <span t-field="doc.company_id.city"/> ,<span t-field="doc.company_id.state_id"/>,<span t-field="doc.company_id.country_id"/> ,<span t-field="doc.company_id.zip"/>.  <br/>Phone : 7066844563   Email- purchase@fevino.com<br/>GST No : <span t-field="doc.company_id.vat"/>
+                    </p>
+                  </td>
+                  <td>Supplier Details  <br/>
+                    <p>Contact Person : <span t-field="doc.partner_id.user_id"/>
+                      <br/>Email : <span t-field="doc.partner_id.user_id.email"/>
+                      <br/>Contact No : <span t-field="doc.partner_id.user_id.mobile"/>
+                      <span t-field="doc.partner_id.user_id.phone"/>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table table-sm-dark">
+              <tbody>
+                <tr class="border-bottom border-top border-start border-end border-2-bold border-dark  fw-bold" style="height: 20.9453px  border: 1px solid black;">
+                  <td style=" border: 1px solid black ;">
+                    <p>Item &amp;Code</p>
+                  </td>
+                  <td style=" border: 1px solid black ;">
+                    <p>ITEM</p>
+                  </td>
+                  <td style=" border: 1px solid black ;">
+                    <p>HSN Code</p>
+                  </td>
+                  <td style=" border: 1px solid black ;">
+                    <p>
+  Qty
+  
+  <br/>
+                    </p>
+                  </td>
+                  <td style=" border: 1px solid black ;">
+                    <p>
+  Rate
+  
+  <br/>
+                    </p>
+                  </td>
+                  <td style=" border: 1px solid black ;">
+                    <p>
+  Total
+  
+  <br/>
+                    </p>
+                  </td>
+                </tr>
+                <tr t-foreach="doc.order_line" t-as="x2many_record">
+                  <td style=" border: 1px solid black ;">
+                    <p>
+                      <span t-field="x2many_record.product_id.x_studio_item_code"/>
+                      <br/>
+                    </p>
+                  </td>
+                  <td style=" border: 1px solid black ;">
+                    <p>
+                      <span t-field="x2many_record.product_id"/>
+                      <span t-field="x2many_record.name"/>
+                    </p>
+                  </td>
+                  <td style=" border: 1px solid black ;">
+                    <p>
+                      <span t-field="x2many_record.product_id.l10n_in_hsn_code"/>
+                      <br/>
+                    </p>
+                  </td>
+                  <td style=" border: 1px solid black ;">
+                    <p>
+                      <span t-field="x2many_record.product_qty"/>
+                      <br/>
+                    </p>
+                  </td>
+                  <td style=" border: 1px solid black ;">
+                    <p>
+                      <span t-field="x2many_record.price_unit"/>
+                      <br/>
+                    </p>
+                  </td>
+                  <td style=" border: 1px solid black ;">
+                    <p>
+                      <span t-field="x2many_record.price_subtotal"/>
+                      <br/>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+          </p>
+            <div class="container o_text_columns">
+              <div class="row">
+                <div class="col-8">
+                  <p>When you sell your products or services, you acknowledge prior
+  receipt of, and agreement to, our general terms and conditions of
+  Purchase. Terms and condition of Purchase available on request.</p>
+                </div>
+                <div class="col-4" style="text-align:right;">
+                  <p> SubTotal  <span t-field="doc.amount_untaxed"/>
+                  </p>
+                  <p>Taxes   <span t-field="doc.amount_tax"/>
+                  </p>
+                  <p>Total. <span t-field="doc.amount_total"/>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p>Terms &amp; Condition: </p>
+            <p>
+          
+              
+                  
+                      
+                          </p>
+            <p>1. Transport Extra at actual. <br/>
+          
+              
+                  
+                      
+                          2. Payment 100% Advance with confirmed Purchase Order. <br/>
+          
+              
+                  
+                      
+                          3. Delay in delivery may result in penalty charges or cancellation of the purchase order. <br/>
+          
+              
+                  
+                      
+                          4. Vendor is responsible for replacing, returning, or refunding any materials below the
+  specified quality standard. <br/>
+          
+              
+                  
+                      
+                          5. Unauthorised sharing of these documents is strictly prohibited without our written
+  consent; the seller acknowledges potential serious damage to Fevino Industries LLP, which
+  may claim full compensation. <br/>
+          
+              
+                  
+                      
+                          6. Special Notes: Non-Branding </p>
+            <p>
+              <span t-field="doc.notes"/>
+              <br/>
+            </p>
+            <p>
+            </p>
+            <div class="container o_text_columns">
+              <div class="row">
+                <div class="col-6">
+                  <p>
+                    <br/>
+                  </p>
+                </div>
+                <div class="col-6">
+                  <p style="text-align: right;">
+                    <img src="/web/image/616-1736248c/Zoho%20Final%20Sign%20Fevino%20Rahul%20%281%29.png" alt="" class="img img-fluid o_we_custom_image" style="width: 50%;"/>
+                  </p>
+                  <p style="text-align: right;">Authorised Signature.       <br/>
+                  </p>
+                  <p>
+                    <br/>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </t>
+    </xpath>
+  </data>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .header-table, .details-table, .terms-table {
+            margin-bottom: 20px;
+        }
+        .header-table th, .header-table td {
+            border: none;
+        }
+        .details-table th, .details-table td {
+            border: none;
+        }
+        .signature {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .signature img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <table class="header-table">
+        <tr>
+            <td>
+                <img src="https://via.placeholder.com/100" alt="Fevino Logo">
+            </td>
+            <td>
+                <h2>FEVINO INDUSTRIES LLP</h2>
+                <p>Sr. No. 36/1/1, Sinhgad Road, Near Lokmat Press,<br>
+                Vadgaon Khurd, Pandarang Industrial Area,<br>
+                Pandarang Industrial Area, Pune, Maharashtra India 411041</p>
+            </td>
+            <td>
+                <h2>PURCHASE ORDER</h2>
+            </td>
+        </tr>
+    </table>
+    
+    <table class="details-table">
+        <tr>
+            <td>
+                <strong>Vendor:</strong><br>
+                JYOTITECH SOLAR LLP<br>
+                PLOT NO-R-516, TTC IND. AREA MIDC RABALE, NAVI MUMBAI<br>
+                MUMBAI, Maharashtra-400701 INDIA<br>
+                Vendor Code: V000312<br>
+                GSTIN: 27AAKFJ8351P1ZK<br>
+                PAN NO: AAKFJ8351P
+            </td>
+            <td>
+                <strong>PO NO:</strong> PO/23-24/0110<br>
+                <strong>PO Date:</strong> 08-06-2023<br>
+                <strong>Rev. No:</strong> 00<br>
+                <strong>Rev. Date:</strong> 08-06-2023<br>
+                <strong>Expected Date:</strong> 12-06-2023<br>
+                <strong>Ship By:</strong> VRL Paid
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Shipped To:</strong><br>
+                Fevino Industries LLP<br>
+                Gat No 35, Behind Yogiraj Resort,<br>
+                Near Zulfikar Engg, Industrial Area Kasurdi Tal Bhor,<br>
+                PUNE-412205, Maharashtra INDIA<br>
+                GST No.: 27AAFFF7SA8H1Z5<br>
+                PAN No.: AAFFF75A8H
+            </td>
+            <td>
+                <strong>Supplier Details:</strong><br>
+                Contact Person: Nitesh Kumar<br>
+                Email ID: nitesh.kumar@jyotitech.com<br>
+                Contact No: 9004709940 / 8389858654
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Sr No</th>
+            <th>Item Code</th>
+            <th>Item & Description</th>
+            <th>HSN Code</th>
+            <th>Qty</th>
+            <th>Rate</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>SP004004</td>
+            <td>SOLAR PANEL 40WP, Make: JYOTITECH<br>
+                Wattage: 40Wp<br>
+                Size: 665x400x35mm<br>
+                Weight: 3Kg<br>
+                Cell: Poly-Crystalline<br>
+                Hole CD: 70375mm<br>
+                Warranty: 25 Years</td>
+            <td>85414300</td>
+            <td>200 Nos</td>
+            <td>1,160.00</td>
+            <td>2,32,000.00</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>SP001003</td>
+            <td>SOLAR PANEL 100WP, Make: JYOTITECH<br>
+                Wattage: 100Wp<br>
+                Size: 665x900x35mm<br>
+                Weight: 7Kg<br>
+                Cell: Poly Crystalline<br>
+                Hole CD: 635x240mm<br>
+                Warranty: 25 Years</td>
+            <td>85414011</td>
+            <td>25 Nos</td>
+            <td>3,100.00</td>
+            <td>77,500.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">Sub Total:</td>
+            <td>3,09,500.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">SGST(6%):</td>
+            <td>13,920.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">CGST(6%):</td>
+            <td>13,920.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">SGST(9%):</td>
+            <td>9,300.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;">CGST(9%):</td>
+            <td>9,300.00</td>
+        </tr>
+        <tr>
+            <td colspan="6" style="text-align:right;"><strong>Total:</strong></td>
+            <td><strong>3,46,640.00</strong></td>
+        </tr>
+    </table>
+
+    <p><strong>Total In Words:</strong> Rupees Three Lakh Forty Six Thousands Forty Only</p>
+
+    <table class="terms-table">
+        <tr>
+            <th>Terms & Condition:</th>
+        </tr>
+        <tr>
+            <td>
+                1. Transport Extra at actual.<br>
+                2. Payment 100% Advance with confirmed Purchase Order.<br>
+                3. Delay in delivery may result in penalty charges or cancellation of the purchase order.<br>
+                4. Vendor is responsible for replacing, returning, or refunding any materials below the specified quality standard.<br>
+                5. Unauthorized sharing of these documents is strictly prohibited without our written consent; the seller acknowledges potential serious damage to Fevino Industries LLP, which may claim full compensation.<br>
+                6. Special Notes: Non-Branding.
+            </td>
+        </tr>
+    </table>
+
+    <div class="signature">
+        <div>Authorized Signature</div>
+        <img src="https://via.placeholder.com/100" alt="Signature Stamp">
+    </div>
+</div>
+
+</body>
+</html>

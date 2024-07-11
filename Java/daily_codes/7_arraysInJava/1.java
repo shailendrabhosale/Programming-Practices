@@ -2,11 +2,11 @@ import java.io.*;
 
 Class Demo2 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 	
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Scanner sc = new Scanner(System.in);
 
-		int num = Integer.parseInt(br.readLine());
+		int num = new 
 
 		
 	}
